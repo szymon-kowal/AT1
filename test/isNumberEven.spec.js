@@ -1,28 +1,28 @@
-import NumbersValidator from '../app/numbers_validator.js'
-import { expect } from 'chai'
-import { describe, beforeEach, afterEach, it } from 'mocha'
+import { expect } from 'chai';
+import { describe, beforeEach, afterEach, it } from 'mocha';
+import NumbersValidator from '../app/numbers_validator.js';
 
-describe('isNumberEven', function () {
-  let validator
+describe('isNumberEven', () => {
+  let validator;
 
-  beforeEach(function () {
-    validator = new NumbersValidator()
-  })
+  beforeEach(() => {
+    validator = new NumbersValidator();
+  });
 
-  afterEach(function () {
-    validator = null
-  })
+  afterEach(() => {
+    validator = null;
+  });
 
   // isNumberEven(int)
 
-  it('should return true if number is even', function () {
-    expect(validator.isNumberEven(4)).to.be.equal(true)
-  })
+  it('should return true if number is even', () => {
+    expect(validator.isNumberEven(4)).to.be.equal(true);
+  });
 
   it('should provide an error when provided a string', () => {
     expect(() => {
-      validator.isNumberEven('4')
-    }).to.throw('[4] is not of type "Number" it is of type "string"')
-  })
+      validator.isNumberEven('4');
+    }).to.throw('[4] is not of type "Number" it is of type "string"');
+  });
   // isAllNumber(array: int[])
-})
+});
